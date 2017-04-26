@@ -1,4 +1,6 @@
 # helloWorld
 
-learning how to code 1 2 3 
+learning how to code
+
+live at https://ameliaelyse.github.io/helloWorld/
 
