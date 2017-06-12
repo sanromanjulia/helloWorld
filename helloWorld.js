@@ -8,7 +8,7 @@ x.onkeyup=y.onkeyup=function(ev){
 }
 
 // playing with Plot.ly
-
+/*
 $.getJSON('https://data.cdc.gov/api/views/epev-k6ss/rows.json',function(dt){
     console.log('this after loadind the data',dt)
      var year=[], fert=[]
@@ -25,7 +25,8 @@ $.getJSON('https://data.cdc.gov/api/views/epev-k6ss/rows.json',function(dt){
       )
       4
 })
-               plotData = function(){
+*/
+plotData = function(){
     $.getJSON('https://data.cdc.gov/api/views/epev-k6ss/rows.json',function(dt){
         console.log('this after loadind the data',dt)
          var year=[], fert=[]
@@ -37,9 +38,9 @@ $.getJSON('https://data.cdc.gov/api/views/epev-k6ss/rows.json',function(dt){
          var n = year.slice(1).indexOf(year[0])
          var yr = year.slice(0,n+1)
          ft1= fert.slice(0,n+1)
-            name = 'Infant mortality'
+            
          ft2=fert.slice(n+1,2*n)
-            name = 'Neonatal mortality'
+            
       
 
          pt1 = Plotly.plot( lala, [{
@@ -48,13 +49,14 @@ $.getJSON('https://data.cdc.gov/api/views/epev-k6ss/rows.json',function(dt){
                 )
          pt2 = Plotly.plot( lala, [{
              x:yr,
-             y: ft2}]
+             y: ft2,
+             name: 'something'}]
        
               )
-              data = [ft1, ft2]
-              fig = go.Figure(data=data)
+              data= [ft1, ft2]
+              
 
-              py.iplot(fig, filename='legend-names')
+           
           
      })
                }
