@@ -53,12 +53,11 @@ plotData = function(){
                 y: ft2,
                 name: 'Neonatal Mortality'}
                 ])
-             // data= [ft1, ft2]
               
 
            
           
      })
-               }
+ }
  plotData()
  console.log('is this before of after?')
