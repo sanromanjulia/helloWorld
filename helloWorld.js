@@ -8,7 +8,7 @@ x.onkeyup=y.onkeyup=function(ev){
 }
 
 // playing with Plot.ly
-
+/*
 $.getJSON('https://data.cdc.gov/api/views/epev-k6ss/rows.json',function(dt){
     console.log('this after loadind the data',dt)
      var year=[], fert=[]
@@ -25,7 +25,8 @@ $.getJSON('https://data.cdc.gov/api/views/epev-k6ss/rows.json',function(dt){
       )
       4
 })
-               plotData = function(){
+*/
+plotData = function(){
     $.getJSON('https://data.cdc.gov/api/views/epev-k6ss/rows.json',function(dt){
         console.log('this after loadind the data',dt)
          var year=[], fert=[]
@@ -44,17 +45,20 @@ $.getJSON('https://data.cdc.gov/api/views/epev-k6ss/rows.json',function(dt){
 
          pt1 = Plotly.plot( lala, [{
              x:yr,
-             y: ft1}]
-                )
+             y: ft1,
+             name:'max fertility'}]
+         )
          pt2 = Plotly.plot( lala, [{
              x:yr,
-             y: ft2}]
-       
-              )
-              data = [ft1, ft2]
-              fig = go.Figure(data=data)
+             y: ft2,
+             name:'min fertility'
+             }]
+          )
+          data = [ft1, ft2]
+          //plt = [pt1,pt2]
+          //fig = go.Figure(data=data)
 
-              py.iplot(fig, filename='legend-names')
+          //py.iplot(fig, filename='legend-names')
           
      })
                }
