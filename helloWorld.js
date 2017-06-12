@@ -42,14 +42,17 @@ plotData = function(){
          ft2=fert.slice(n+1,2*n)
          
 
-         pt1 = Plotly.plot( lala, [{
-                x:yr,
-                y: ft1},
+         pt1 = Plotly.plot( lala, [
              {
                 x:yr,
+                y: ft1,
+                name: 'Infant Mortality'},
+
+             {
+                x: yr,
                 y: ft2,
-                name: 'something'}
-             ])
+                name: 'Neonatal Mortality'}
+                ])
              // data= [ft1, ft2]
               
 
